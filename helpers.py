@@ -40,6 +40,13 @@ def sequence_segmentation(alarm_dict_list, time_delta):
     return alarm_sequence
 
 def sequence_lst(alarm_sequence, alarm_definition = "SourceName_Identifier", min_seq_len = 5):
+    """
+    This function converts alarm_sequence into a list of strings
+    alarm_sequence: list of lists (alarms seperated by time_delta)
+    alarm_definition: alarm definition
+    min_seq_len: minimum sequence length
+    Returns: list of strings
+    """
     seq_lst = []
     for sequence in alarm_sequence:
         seq = " ".join([alarm[alarm_definition] for alarm in sequence])
