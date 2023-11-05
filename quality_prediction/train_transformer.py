@@ -80,7 +80,7 @@ class TransformerTimeSeries(nn.Module):
 # Instantiate the Transformer model
 input_dim = paired_data[0][0].shape[-1]  # Assuming paired_data[0][0] is [seq_len, features]
 output_dim = 1
-
+nhead = 1
 
 # Train the model
 epochs = 100  # Adjust the number of epochs as needed
@@ -124,7 +124,7 @@ for num_layers, dim_feedforward, dropout, learning_rate in itertools.product(num
     print(f"Running for: num_layers={num_layers}, dim_feedforward={dim_feedforward}, dropout={dropout}, learning_rate={learning_rate}")
     
     # Instantiate the Transformer model
-    model = TransformerTimeSeries(input_dim=input_dim, output_dim=1, num_layers=num_layers, dim_feedforward=dim_feedforward, dropout=dropout)
+    model = TransformerTimeSeries(input_dim=input_dim, output_dim=1, nhead=nhead, num_layers=num_layers, dim_feedforward=dim_feedforward, dropout=dropout)
     model.to(device)
     
     # Define the loss function and optimizer
