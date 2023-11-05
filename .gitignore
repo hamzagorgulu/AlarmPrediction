@@ -1,2 +1,7 @@
 tryings/data-compression/Market_Basket_Optimisation.csv
 /datasets
+*.csv
+*.npy
+*.pth
+*.xlsx
+/runs

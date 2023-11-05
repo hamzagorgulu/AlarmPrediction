@@ -1,0 +1,28 @@
+
+- Aylik olarak verilen datasetlerden corrupt olanlar duzeltildi ve birlestirildi. 
+- Input sutun verileri kategorik ve numerik olarak siniflandirilip outlierlar tespit edildi.
+- Outlierlar bulundugu sutunun ortalama degeri ile birlestirildi.
+- Target datasetinde cok fazla degisken var ve bunlarin yarisina yakini tamamen nan verilerinden olusuyor. 
+Simdilik tek bir target degeri sectim.
+
+- Bu dataset temizleme surecinden sonra input ve targetlari pairleyip vanilla bir neural network modeli olusturup train etmeye basladim. 
+Butun normalizasyon sureclerini tamamladim. Fakat basta SGD with momentum optimizer kullandigim icin gradientler explode oluyordu. Bir kac denemeden sonra en uygun Adam optimizer
+olacagini farkettim. 
+- Fakat yine de bir kac epochtan sonra loss ani sekilde yukselip train bozuluyor. Sebebi simdilik network architecture olabilir diye
+dusunuyorum.
+- total test loss lst: [tensor(17375.5527), tensor(13968.7656), tensor(13192.8643), tensor(12883.9453), tensor(12693.1602), tensor(14640.9619), tensor(20306.7832), tensor(30184.2910), tensor(40945.9102), tensor(44818.4609)]
+- model architecture:
+ NeuralNetwork(
+  (layer1): Linear(in_features=54240, out_features=500, bias=True)
+  (layer2): Linear(in_features=500, out_features=500, bias=True)
+  (layer3): Linear(in_features=500, out_features=50, bias=True)
+  (layer4): Linear(in_features=50, out_features=1, bias=True)
+)
+- train pairs lenght: 784
+- test pairs lenght: 196
+
+
+Sorularim
+- DHP Dizel sarj renk 1.5den buyuk olunca anomali mi oluyor? 1.5 siniri da bazi yerlerde(2022 6 ocak plt1650) 2.0 olarak belirlenmis, neden?
+- Sahada bu tahminleme hangi asamalarda kullanilabilir? Mesela ilk DHP %5 hesaplandiktan sonra mi? Yoksa daha oncesinde kullanilabilir mi?
+- There are many nan values in the quality measurements in plt1650. How to evaluate them?
