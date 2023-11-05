@@ -84,6 +84,7 @@ output_dim = 1
 
 # Train the model
 epochs = 100  # Adjust the number of epochs as needed
+batch_size = 50
 total_num_of_data = len(paired_data)
 num_of_train_data = floor(total_num_of_data * 0.9)
 train_paired_data = paired_data[:num_of_train_data]
@@ -93,19 +94,19 @@ print(f"test pairs len: {len(test_paired_data)}")
 
 # create pytorch datalaoders
 # Convert the paired data to tensors
-train_inputs = [torch.from_numpy(pair[0]).float() for pair in train_paired_data]
-train_targets = [torch.from_numpy(pair[1]).float() for pair in train_paired_data]
-test_inputs = [torch.from_numpy(pair[0]).float() for pair in test_paired_data]
-test_targets = [torch.from_numpy(pair[1]).float() for pair in test_paired_data]
+train_inputs = torch.tensor([pair[0] for pair in train_paired_data]).float()
+train_targets = torch.tensor([pair[1] for pair in train_paired_data]).float()
+test_inputs = torch.tensor([pair[0] for pair in test_paired_data]).float()
+test_targets = torch.tensor([pair[1] for pair in test_paired_data]).float()
 
 # Create TensorDataset
-train_dataset = TensorDataset(*train_inputs, *train_targets)
-test_dataset = TensorDataset(*test_inputs, *test_targets)
+train_dataset = TensorDataset(train_inputs, train_targets)
+test_dataset = TensorDataset(test_inputs, test_targets)
 
 # Create DataLoader
-train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=10, shuffle=False)
-
+train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+breakpoint()
 # Define the values for the grid search
 num_layers_list = [2, 4, 8, 16]
 dim_feedforward_list = [256, 512, 1024]
