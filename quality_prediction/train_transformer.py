@@ -18,8 +18,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"device is: {device}")
 
 def get_paired_data():
-    input_path = r"C:\Users\hamza\Desktop\AlarmPrediction\process_inputs.npy"
-    target_path = r"C:\Users\hamza\Desktop\AlarmPrediction\quality_targets.npy"
+    input_path = "process_inputs.npy"
+    target_path = "quality_targets.npy"
 
     f = open(input_path, "rb")
     inputs = np.load(f)
