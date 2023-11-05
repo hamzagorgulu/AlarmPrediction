@@ -7,6 +7,10 @@ import torch.optim as optim
 from math import floor
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
+import itertools
+from torch.utils.data import DataLoader, TensorDataset
+import json
+
 
 writer = SummaryWriter()
 
@@ -76,12 +80,7 @@ class TransformerTimeSeries(nn.Module):
 # Instantiate the Transformer model
 input_dim = paired_data[0][0].shape[-1]  # Assuming paired_data[0][0] is [seq_len, features]
 output_dim = 1
-model = TransformerTimeSeries(input_dim, output_dim, nhead = 1, num_layers=4, dim_feedforward=512, dropout=0.1)
-model.to(device)
 
-# Define the loss function and optimizer
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=1e-2)
 
 # Train the model
 epochs = 100  # Adjust the number of epochs as needed
@@ -92,60 +91,123 @@ test_paired_data = paired_data[num_of_train_data:]
 print(f"train pairs len: {len(train_paired_data)}")
 print(f"test pairs len: {len(test_paired_data)}")
 
+# create pytorch datalaoders
+# Convert the paired data to tensors
+train_inputs = [torch.from_numpy(pair[0]).float() for pair in train_paired_data]
+train_targets = [torch.from_numpy(pair[1]).float() for pair in train_paired_data]
+test_inputs = [torch.from_numpy(pair[0]).float() for pair in test_paired_data]
+test_targets = [torch.from_numpy(pair[1]).float() for pair in test_paired_data]
+
+# Create TensorDataset
+train_dataset = TensorDataset(*train_inputs, *train_targets)
+test_dataset = TensorDataset(*test_inputs, *test_targets)
+
+# Create DataLoader
+train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=10, shuffle=False)
+
+# Define the values for the grid search
+num_layers_list = [2, 4, 8, 16]
+dim_feedforward_list = [256, 512, 1024]
+dropout_list = [0.1, 0.2, 0.3]
+learning_rate_list = [1e-3, 1e-4, 1e-5, 1e-6]
+
 test_loss_lst = []
-for epoch in range(epochs):
-    running_train_loss = 0
-    running_test_loss = 0
-    for idx, (input, output) in enumerate(tqdm(train_paired_data)):
-        model.train()
-        X = torch.from_numpy(input).to(torch.float32).unsqueeze(0).to(device) # mini batch
-        assert X.isnan().unique().item() == False, "The input contains nan values"
-        y = torch.from_numpy(output).to(torch.float32).unsqueeze(0).to(device)
+best_test_loss = float('inf')
+best_model_weights = None
+# Store the results with hyperparameters
+results = {}
 
-        # Forward pass
-        outputs = model(X)
-        loss = criterion(outputs, y) # both is float quality values
-
-        # Backward pass and optimization
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-
-        # Log training loss to TensorBoard
-        writer.add_scalar('Loss/Train', loss.item(), epoch * len(train_paired_data) + idx)
-        running_train_loss += loss.item()
-
-        if idx % 200 == 0:
-            print(f'Train: Epoch [{epoch+1}/{epochs}], Loss: {loss.item():.4f}, target: {y.item()}, pred: {outputs.item()}')
+# Perform grid search
+for num_layers, dim_feedforward, dropout, learning_rate in itertools.product(num_layers_list, dim_feedforward_list, dropout_list, learning_rate_list):
+    print(f"Running for: num_layers={num_layers}, dim_feedforward={dim_feedforward}, dropout={dropout}, learning_rate={learning_rate}")
     
-    # Log average training loss for the epoch
-    writer.add_scalar('Loss/Average_Train', running_train_loss / len(train_paired_data), epoch)
-
-    for idx, (input, output) in enumerate(test_paired_data):
-        X = torch.from_numpy(input).to(torch.float32).unsqueeze(0).to(device)
-        assert X.isnan().unique().item() == False, "The input contains nan values"
-        y = torch.from_numpy(output).to(torch.float32).unsqueeze(0).to(device)
-
-        with torch.no_grad():
-            outputs = model(X)
-            loss = criterion(outputs, y) # both is float quality values
-            running_test_loss += loss.item()
-
-        # Log test loss for each step
-        writer.add_scalar('Loss/Test', loss.item(), epoch * len(test_paired_data) + idx)
-
-        if idx % 5 == 0:
-            print(f'Test: Epoch [{epoch+1}/{epochs}], Loss: {loss.item():.4f}, target: {y.item()}, pred: {outputs.item()}')
+    # Instantiate the Transformer model
+    model = TransformerTimeSeries(input_dim=input_dim, output_dim=1, num_layers=num_layers, dim_feedforward=dim_feedforward, dropout=dropout)
+    model.to(device)
     
-    # Log average test loss for the epoch
-    writer.add_scalar('Loss/Average_Test', running_test_loss / len(test_paired_data), epoch)
+    # Define the loss function and optimizer
+    criterion = nn.MSELoss()
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+    
+    for epoch in range(epochs):
+        running_train_loss = 0
+        running_test_loss = 0
+        for batch_idx, (batch_input, batch_output) in enumerate(train_loader):
+            model.train()
+            batch_input = batch_input.to(device)
+            batch_output = batch_output.to(device)
+            #X = torch.from_numpy(input).to(torch.float32).unsqueeze(0).to(device) # mini batch
+            #assert X.isnan().unique().item() == False, "The input contains nan values"
+            #y = torch.from_numpy(output).to(torch.float32).unsqueeze(0).to(device)
 
-    test_loss_lst.append(running_test_loss)
-    print(f"test loss for epochs: {test_loss_lst} ")
-    if (epoch + 1) % 1 == 0:
-        model_path = 'model_weights_transformer.pth'
-        torch.save(model.state_dict(), model_path)
-        print(f"Pytorch stated dict is saved at {model_path}")
+            # Forward pass
+            outputs = model(batch_input)
+            loss = criterion(outputs, batch_output) # both is float quality values
+
+            # Backward pass and optimization
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
+            # Log training loss to TensorBoard
+            writer.add_scalar('Loss/Train', loss.item(), epoch * len(train_paired_data) + batch_idx)
+            running_train_loss += loss.item()
+            
+        # Log average training loss for the epoch
+        writer.add_scalar('Loss/Average_Train', running_train_loss / len(train_paired_data), epoch)
+        print(f'Train: Epoch [{epoch+1}/{epochs}], Loss: {running_train_loss / len(train_paired_data):.4f}')
+
+        for batch_idx, (batch_input, batch_output) in enumerate(test_loader):
+            batch_input = batch_input.to(device)
+            batch_output = batch_output.to(device)
+            #X = torch.from_numpy(input).to(torch.float32).unsqueeze(0).to(device)
+            #assert X.isnan().unique().item() == False, "The input contains nan values"
+            #y = torch.from_numpy(output).to(torch.float32).unsqueeze(0).to(device)
+
+            with torch.no_grad():
+                outputs = model(batch_input)
+                loss = criterion(outputs, batch_output) # both is float quality values
+                running_test_loss += loss.item()
+
+            # Log test loss for each step
+            writer.add_scalar('Loss/Test', loss.item(), epoch * len(test_paired_data) + batch_idx)
+        
+        # Log average test loss for the epoch
+        writer.add_scalar('Loss/Average_Test', running_test_loss / len(test_paired_data), epoch)
+        print(f'Test: Epoch [{epoch+1}/{epochs}], Loss: {running_test_loss / len(test_paired_data):.4f}')
+
+        if running_test_loss < best_test_loss:
+            best_test_loss = running_test_loss
+            best_model_weights = model.state_dict()
+            best_hyperparameters = {
+            "num_layers": num_layers,
+            "dim_feedforward": dim_feedforward,
+            "dropout": dropout,
+            "learning_rate": learning_rate
+        }
+    # Save the best model's weights based on test loss
+    if best_model_weights is not None:
+        best_model_path = f'best_model_weights_transformer_num_layers_{best_hyperparameters["num_layers"]}_dim_{best_hyperparameters["dim_feedforward"]}_dropout_{best_hyperparameters["dropout"]}_lr_{best_hyperparameters["learning_rate"]}.pth'
+        torch.save(best_model_weights, best_model_path)
+        print(f"PyTorch best model's weights are saved at {best_model_path}")
+
+        
+        results[(num_layers, dim_feedforward, dropout, learning_rate)] = {
+            "hyperparameters": {
+                "num_layers": num_layers,
+                "dim_feedforward": dim_feedforward,
+                "dropout": dropout,
+                "learning_rate": learning_rate
+            },
+            "results": {
+                "train_loss": running_train_loss / len(train_loader),
+                "test_loss": running_test_loss / len(test_loader)
+            }
+        }
+
+with open('grid_search_results.json', 'w') as outfile:
+    json.dump(results, outfile, indent=4)
 
 # Close the writer when you are done
 writer.close()
