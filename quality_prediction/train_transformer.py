@@ -106,7 +106,7 @@ test_dataset = TensorDataset(test_inputs, test_targets)
 # Create DataLoader
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-breakpoint()
+
 # Define the values for the grid search
 num_layers_list = [2, 4, 8, 16]
 dim_feedforward_list = [256, 512, 1024]
@@ -212,6 +212,5 @@ with open('grid_search_results.json', 'w') as outfile:
 
 # Close the writer when you are done
 writer.close()
-breakpoint()
 
 
