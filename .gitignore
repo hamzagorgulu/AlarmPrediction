@@ -5,3 +5,4 @@ tryings/data-compression/Market_Basket_Optimisation.csv
 *.pth
 *.xlsx
 /runs
+/venv
