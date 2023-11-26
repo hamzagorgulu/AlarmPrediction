@@ -1,0 +1,12 @@
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0  
+mse:0.1479269415140152, mae:0.2393742799758911
+
+ECL_96_192_iTransformer_custom_M_ft96_sl48_ll192_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0  
+mse:0.1665620058774948, mae:0.2576456069946289
+
+ECL_96_336_iTransformer_custom_M_ft96_sl48_ll336_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0  
+mse:0.17806094884872437, mae:0.2709307074546814
+
+ECL_96_720_iTransformer_custom_M_ft96_sl48_ll720_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0  
+mse:0.20963512361049652, mae:0.29907429218292236
+

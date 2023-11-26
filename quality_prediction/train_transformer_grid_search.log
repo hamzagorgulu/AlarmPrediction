@@ -1,0 +1,444 @@
+nohup: ignoring input
+2023-11-05 21:14:29.701556: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/scratch/users/hgorgulu22/hpc_run/workfolder/Projects/AlarmPrediction/quality_prediction/train_transformer.py:97: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1670525552843/work/torch/csrc/utils/tensor_new.cpp:230.)
+  train_inputs = torch.tensor([pair[0] for pair in train_paired_data]).float()
+device is: cuda
+Input-target pairs are loaded.
+train pairs len: 882
+test pairs len: 98
+Running for: num_layers=2, dim_feedforward=256, dropout=0.1, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1065.8291
+Test: Epoch [1/2], Loss: 1595.4361
+Train: Epoch [2/2], Loss: 1046.4137
+Test: Epoch [2/2], Loss: 1586.6036
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.1, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1078.8728
+Test: Epoch [1/2], Loss: 1634.1059
+Train: Epoch [2/2], Loss: 1072.8683
+Test: Epoch [2/2], Loss: 1625.3812
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.1, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1084.5900
+Test: Epoch [1/2], Loss: 1646.4224
+Train: Epoch [2/2], Loss: 1083.9995
+Test: Epoch [2/2], Loss: 1645.2857
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.1, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1079.5520
+Test: Epoch [1/2], Loss: 1639.7221
+Train: Epoch [2/2], Loss: 1079.3596
+Test: Epoch [2/2], Loss: 1639.4812
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.2, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1063.9238
+Test: Epoch [1/2], Loss: 1597.0083
+Train: Epoch [2/2], Loss: 1048.0990
+Test: Epoch [2/2], Loss: 1589.5505
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.2, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1075.0880
+Test: Epoch [1/2], Loss: 1629.4761
+Train: Epoch [2/2], Loss: 1070.0320
+Test: Epoch [2/2], Loss: 1622.3611
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.2, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1076.2186
+Test: Epoch [1/2], Loss: 1635.1802
+Train: Epoch [2/2], Loss: 1075.6980
+Test: Epoch [2/2], Loss: 1635.1145
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.2, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1078.3581
+Test: Epoch [1/2], Loss: 1638.2510
+Train: Epoch [2/2], Loss: 1078.3187
+Test: Epoch [2/2], Loss: 1638.3321
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.3, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1068.5854
+Test: Epoch [1/2], Loss: 1603.3900
+Train: Epoch [2/2], Loss: 1051.8726
+Test: Epoch [2/2], Loss: 1594.9407
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.3, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1078.7762
+Test: Epoch [1/2], Loss: 1635.6639
+Train: Epoch [2/2], Loss: 1074.0064
+Test: Epoch [2/2], Loss: 1628.8171
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.3, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1084.0207
+Test: Epoch [1/2], Loss: 1645.2333
+Train: Epoch [2/2], Loss: 1083.4220
+Test: Epoch [2/2], Loss: 1644.1955
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=256, dropout=0.3, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1085.5348
+Test: Epoch [1/2], Loss: 1650.6327
+Train: Epoch [2/2], Loss: 1085.5232
+Test: Epoch [2/2], Loss: 1649.8533
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.1, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1062.1849
+Test: Epoch [1/2], Loss: 1595.5776
+Train: Epoch [2/2], Loss: 1048.0113
+Test: Epoch [2/2], Loss: 1590.3484
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.1, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1077.3987
+Test: Epoch [1/2], Loss: 1630.5360
+Train: Epoch [2/2], Loss: 1069.3150
+Test: Epoch [2/2], Loss: 1619.4185
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.1, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1080.8141
+Test: Epoch [1/2], Loss: 1642.6156
+Train: Epoch [2/2], Loss: 1080.0745
+Test: Epoch [2/2], Loss: 1641.6577
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.1, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1080.4017
+Test: Epoch [1/2], Loss: 1641.6159
+Train: Epoch [2/2], Loss: 1080.3360
+Test: Epoch [2/2], Loss: 1641.7275
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.2, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1060.1572
+Test: Epoch [1/2], Loss: 1593.4820
+Train: Epoch [2/2], Loss: 1046.6361
+Test: Epoch [2/2], Loss: 1588.1894
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.2, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1070.6976
+Test: Epoch [1/2], Loss: 1619.2514
+Train: Epoch [2/2], Loss: 1063.9243
+Test: Epoch [2/2], Loss: 1610.9493
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.2, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1080.6498
+Test: Epoch [1/2], Loss: 1642.6649
+Train: Epoch [2/2], Loss: 1079.8893
+Test: Epoch [2/2], Loss: 1640.8029
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.2, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1078.7527
+Test: Epoch [1/2], Loss: 1639.7105
+Train: Epoch [2/2], Loss: 1078.4711
+Test: Epoch [2/2], Loss: 1639.1033
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.3, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1061.6997
+Test: Epoch [1/2], Loss: 1595.2698
+Train: Epoch [2/2], Loss: 1047.2884
+Test: Epoch [2/2], Loss: 1588.7848
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.3, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1076.2449
+Test: Epoch [1/2], Loss: 1629.4812
+Train: Epoch [2/2], Loss: 1069.1771
+Test: Epoch [2/2], Loss: 1620.5123
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.3, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1082.9849
+Test: Epoch [1/2], Loss: 1644.5942
+Train: Epoch [2/2], Loss: 1082.2447
+Test: Epoch [2/2], Loss: 1642.9552
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=512, dropout=0.3, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1082.6879
+Test: Epoch [1/2], Loss: 1647.5161
+Train: Epoch [2/2], Loss: 1082.7558
+Test: Epoch [2/2], Loss: 1648.1476
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.1, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1058.2411
+Test: Epoch [1/2], Loss: 1592.5717
+Train: Epoch [2/2], Loss: 1046.2239
+Test: Epoch [2/2], Loss: 1587.4614
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.1, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1077.5662
+Test: Epoch [1/2], Loss: 1628.4506
+Train: Epoch [2/2], Loss: 1067.3689
+Test: Epoch [2/2], Loss: 1615.3999
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.1, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1078.9371
+Test: Epoch [1/2], Loss: 1640.1094
+Train: Epoch [2/2], Loss: 1077.6113
+Test: Epoch [2/2], Loss: 1638.3670
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.1, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1085.1274
+Test: Epoch [1/2], Loss: 1648.7431
+Train: Epoch [2/2], Loss: 1085.0561
+Test: Epoch [2/2], Loss: 1648.6722
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.2, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1060.3107
+Test: Epoch [1/2], Loss: 1594.8155
+Train: Epoch [2/2], Loss: 1047.5493
+Test: Epoch [2/2], Loss: 1589.4731
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.2, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1072.5207
+Test: Epoch [1/2], Loss: 1620.8573
+Train: Epoch [2/2], Loss: 1062.9899
+Test: Epoch [2/2], Loss: 1609.2176
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.2, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1083.9708
+Test: Epoch [1/2], Loss: 1646.4233
+Train: Epoch [2/2], Loss: 1082.8175
+Test: Epoch [2/2], Loss: 1644.5238
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.2, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1080.7999
+Test: Epoch [1/2], Loss: 1640.6435
+Train: Epoch [2/2], Loss: 1080.7432
+Test: Epoch [2/2], Loss: 1640.6751
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.3, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1060.1270
+Test: Epoch [1/2], Loss: 1596.8254
+Train: Epoch [2/2], Loss: 1048.8416
+Test: Epoch [2/2], Loss: 1591.4675
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.3, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1075.3860
+Test: Epoch [1/2], Loss: 1624.2865
+Train: Epoch [2/2], Loss: 1066.4692
+Test: Epoch [2/2], Loss: 1613.9230
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.3, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1082.1380
+Test: Epoch [1/2], Loss: 1642.2251
+Train: Epoch [2/2], Loss: 1080.8216
+Test: Epoch [2/2], Loss: 1640.2439
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=2, dim_feedforward=1024, dropout=0.3, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1080.4372
+Test: Epoch [1/2], Loss: 1643.4826
+Train: Epoch [2/2], Loss: 1080.3165
+Test: Epoch [2/2], Loss: 1642.8452
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.1, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1061.1899
+Test: Epoch [1/2], Loss: 1594.5343
+Train: Epoch [2/2], Loss: 1046.9436
+Test: Epoch [2/2], Loss: 1588.8844
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.1, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1081.7714
+Test: Epoch [1/2], Loss: 1635.2710
+Train: Epoch [2/2], Loss: 1072.8288
+Test: Epoch [2/2], Loss: 1623.5179
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.1, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1083.2606
+Test: Epoch [1/2], Loss: 1647.0928
+Train: Epoch [2/2], Loss: 1082.2052
+Test: Epoch [2/2], Loss: 1645.4971
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.1, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1075.9566
+Test: Epoch [1/2], Loss: 1634.5435
+Train: Epoch [2/2], Loss: 1075.7754
+Test: Epoch [2/2], Loss: 1634.2793
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.2, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1060.1090
+Test: Epoch [1/2], Loss: 1594.8417
+Train: Epoch [2/2], Loss: 1047.1725
+Test: Epoch [2/2], Loss: 1588.9043
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.2, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1079.8224
+Test: Epoch [1/2], Loss: 1632.6873
+Train: Epoch [2/2], Loss: 1071.1980
+Test: Epoch [2/2], Loss: 1620.4098
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.2, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1084.4015
+Test: Epoch [1/2], Loss: 1647.7377
+Train: Epoch [2/2], Loss: 1083.5815
+Test: Epoch [2/2], Loss: 1646.3957
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.2, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1079.3094
+Test: Epoch [1/2], Loss: 1641.2141
+Train: Epoch [2/2], Loss: 1079.1190
+Test: Epoch [2/2], Loss: 1640.9383
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.3, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1063.4080
+Test: Epoch [1/2], Loss: 1598.3873
+Train: Epoch [2/2], Loss: 1049.4919
+Test: Epoch [2/2], Loss: 1592.2900
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.3, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1076.1199
+Test: Epoch [1/2], Loss: 1627.4110
+Train: Epoch [2/2], Loss: 1068.5148
+Test: Epoch [2/2], Loss: 1618.8211
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.3, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1080.7863
+Test: Epoch [1/2], Loss: 1643.4362
+Train: Epoch [2/2], Loss: 1079.9635
+Test: Epoch [2/2], Loss: 1642.2246
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=256, dropout=0.3, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1087.5598
+Test: Epoch [1/2], Loss: 1652.9029
+Train: Epoch [2/2], Loss: 1087.3891
+Test: Epoch [2/2], Loss: 1652.8742
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_2_dim_256_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.1, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1059.3060
+Test: Epoch [1/2], Loss: 1591.1191
+Train: Epoch [2/2], Loss: 1045.1150
+Test: Epoch [2/2], Loss: 1585.9008
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.1, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1075.9268
+Test: Epoch [1/2], Loss: 1624.2465
+Train: Epoch [2/2], Loss: 1065.1116
+Test: Epoch [2/2], Loss: 1612.7205
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.1, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1073.4379
+Test: Epoch [1/2], Loss: 1630.1429
+Train: Epoch [2/2], Loss: 1072.1519
+Test: Epoch [2/2], Loss: 1628.2143
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.1, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1078.2303
+Test: Epoch [1/2], Loss: 1640.3527
+Train: Epoch [2/2], Loss: 1078.1633
+Test: Epoch [2/2], Loss: 1640.1730
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.2, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1061.4569
+Test: Epoch [1/2], Loss: 1598.3968
+Train: Epoch [2/2], Loss: 1050.1260
+Test: Epoch [2/2], Loss: 1593.5761
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.2, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1077.5363
+Test: Epoch [1/2], Loss: 1626.3669
+Train: Epoch [2/2], Loss: 1065.6416
+Test: Epoch [2/2], Loss: 1611.9584
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.2, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1080.5697
+Test: Epoch [1/2], Loss: 1640.6693
+Train: Epoch [2/2], Loss: 1079.4569
+Test: Epoch [2/2], Loss: 1638.8908
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.2, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1083.5174
+Test: Epoch [1/2], Loss: 1646.7216
+Train: Epoch [2/2], Loss: 1083.3438
+Test: Epoch [2/2], Loss: 1646.6684
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.3, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1058.8597
+Test: Epoch [1/2], Loss: 1594.9751
+Train: Epoch [2/2], Loss: 1047.6279
+Test: Epoch [2/2], Loss: 1589.3823
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.3, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1071.9226
+Test: Epoch [1/2], Loss: 1619.3788
+Train: Epoch [2/2], Loss: 1062.8509
+Test: Epoch [2/2], Loss: 1609.7878
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.3, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1080.4719
+Test: Epoch [1/2], Loss: 1641.5423
+Train: Epoch [2/2], Loss: 1079.0665
+Test: Epoch [2/2], Loss: 1639.6869
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=512, dropout=0.3, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1080.9683
+Test: Epoch [1/2], Loss: 1642.7420
+Train: Epoch [2/2], Loss: 1080.9290
+Test: Epoch [2/2], Loss: 1642.5156
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.1, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1056.0944
+Test: Epoch [1/2], Loss: 1593.0172
+Train: Epoch [2/2], Loss: 1046.3322
+Test: Epoch [2/2], Loss: 1587.5159
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.1, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1076.1986
+Test: Epoch [1/2], Loss: 1622.9665
+Train: Epoch [2/2], Loss: 1063.3105
+Test: Epoch [2/2], Loss: 1610.0636
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.1, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1077.2164
+Test: Epoch [1/2], Loss: 1635.7667
+Train: Epoch [2/2], Loss: 1075.3606
+Test: Epoch [2/2], Loss: 1633.1130
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.1, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1082.1724
+Test: Epoch [1/2], Loss: 1644.0928
+Train: Epoch [2/2], Loss: 1082.0473
+Test: Epoch [2/2], Loss: 1643.8040
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.2, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1057.4479
+Test: Epoch [1/2], Loss: 1592.7897
+Train: Epoch [2/2], Loss: 1046.3273
+Test: Epoch [2/2], Loss: 1587.4115
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.2, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1077.2394
+Test: Epoch [1/2], Loss: 1620.9094
+Train: Epoch [2/2], Loss: 1061.7063
+Test: Epoch [2/2], Loss: 1606.3779
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.2, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1082.8862
+Test: Epoch [1/2], Loss: 1644.8369
+Train: Epoch [2/2], Loss: 1080.8688
+Test: Epoch [2/2], Loss: 1641.6755
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.2, learning_rate=1e-06
+Train: Epoch [1/2], Loss: 1079.8916
+Test: Epoch [1/2], Loss: 1640.5475
+Train: Epoch [2/2], Loss: 1079.7259
+Test: Epoch [2/2], Loss: 1640.2659
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.3, learning_rate=0.001
+Train: Epoch [1/2], Loss: 1057.6084
+Test: Epoch [1/2], Loss: 1596.6417
+Train: Epoch [2/2], Loss: 1048.7669
+Test: Epoch [2/2], Loss: 1591.0121
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.3, learning_rate=0.0001
+Train: Epoch [1/2], Loss: 1077.0874
+Test: Epoch [1/2], Loss: 1624.2089
+Train: Epoch [2/2], Loss: 1063.1897
+Test: Epoch [2/2], Loss: 1609.1276
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.3, learning_rate=1e-05
+Train: Epoch [1/2], Loss: 1083.9404
+Test: Epoch [1/2], Loss: 1645.8929
+Train: Epoch [2/2], Loss: 1081.9545
+Test: Epoch [2/2], Loss: 1643.2173
+PyTorch best model's weights are saved at best_model_weights_transformer_num_layers_4_dim_512_dropout_0.1_lr_0.001.pth
+Running for: num_layers=4, dim_feedforward=1024, dropout=0.3, learning_rate=1e-06
+Traceback (most recent call last):
+  File "/scratch/users/hgorgulu22/hpc_run/workfolder/Projects/AlarmPrediction/quality_prediction/train_transformer.py", line 151, in <module>
+    loss.backward()
+  File "/kuacc/users/hgorgulu22/.conda/envs/waris-thesis2/lib/python3.10/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/kuacc/users/hgorgulu22/.conda/envs/waris-thesis2/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 282.00 MiB (GPU 0; 39.44 GiB total capacity; 4.75 GiB already allocated; 155.94 MiB free; 5.04 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

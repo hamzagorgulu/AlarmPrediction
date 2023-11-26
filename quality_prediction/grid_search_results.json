@@ -1,0 +1,386 @@
+{
+    "(2, 256, 0.1, 0.001)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 256,
+            "dropout": 0.1,
+            "learning_rate": 0.001
+        },
+        "results": {
+            "train_loss": 152214.35416666666,
+            "test_loss": 154095.03125
+        }
+    },
+    "(2, 256, 0.1, 0.0001)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 256,
+            "dropout": 0.1,
+            "learning_rate": 0.0001
+        },
+        "results": {
+            "train_loss": 155720.06770833334,
+            "test_loss": 157640.1875
+        }
+    },
+    "(2, 256, 0.1, 1e-05)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 256,
+            "dropout": 0.1,
+            "learning_rate": 1e-05
+        },
+        "results": {
+            "train_loss": 158472.03645833334,
+            "test_loss": 160466.203125
+        }
+    },
+    "(2, 256, 0.1, 1e-06)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 256,
+            "dropout": 0.1,
+            "learning_rate": 1e-06
+        },
+        "results": {
+            "train_loss": 159160.171875,
+            "test_loss": 161503.0625
+        }
+    },
+    "(2, 256, 0.3, 0.001)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 256,
+            "dropout": 0.3,
+            "learning_rate": 0.001
+        },
+        "results": {
+            "train_loss": 152192.98958333334,
+            "test_loss": 154082.09375
+        }
+    },
+    "(2, 256, 0.3, 0.0001)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 256,
+            "dropout": 0.3,
+            "learning_rate": 0.0001
+        },
+        "results": {
+            "train_loss": 155585.578125,
+            "test_loss": 157593.1875
+        }
+    },
+    "(2, 256, 0.3, 1e-05)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 256,
+            "dropout": 0.3,
+            "learning_rate": 1e-05
+        },
+        "results": {
+            "train_loss": 158550.28125,
+            "test_loss": 160419.5625
+        }
+    },
+    "(2, 256, 0.3, 1e-06)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 256,
+            "dropout": 0.3,
+            "learning_rate": 1e-06
+        },
+        "results": {
+            "train_loss": 158639.57291666666,
+            "test_loss": 160590.140625
+        }
+    },
+    "(2, 512, 0.1, 0.001)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 512,
+            "dropout": 0.1,
+            "learning_rate": 0.001
+        },
+        "results": {
+            "train_loss": 152278.49479166666,
+            "test_loss": 154148.34375
+        }
+    },
+    "(2, 512, 0.1, 0.0001)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 512,
+            "dropout": 0.1,
+            "learning_rate": 0.0001
+        },
+        "results": {
+            "train_loss": 155124.27083333334,
+            "test_loss": 157018.21875
+        }
+    },
+    "(2, 512, 0.1, 1e-05)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 512,
+            "dropout": 0.1,
+            "learning_rate": 1e-05
+        },
+        "results": {
+            "train_loss": 158659.29166666666,
+            "test_loss": 160817.1875
+        }
+    },
+    "(2, 512, 0.1, 1e-06)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 512,
+            "dropout": 0.1,
+            "learning_rate": 1e-06
+        },
+        "results": {
+            "train_loss": 159070.48958333334,
+            "test_loss": 161334.515625
+        }
+    },
+    "(2, 512, 0.3, 0.001)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 512,
+            "dropout": 0.3,
+            "learning_rate": 0.001
+        },
+        "results": {
+            "train_loss": 152950.11979166666,
+            "test_loss": 154848.390625
+        }
+    },
+    "(2, 512, 0.3, 0.0001)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 512,
+            "dropout": 0.3,
+            "learning_rate": 0.0001
+        },
+        "results": {
+            "train_loss": 155485.9375,
+            "test_loss": 157395.609375
+        }
+    },
+    "(2, 512, 0.3, 1e-05)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 512,
+            "dropout": 0.3,
+            "learning_rate": 1e-05
+        },
+        "results": {
+            "train_loss": 158613.5625,
+            "test_loss": 160716.5625
+        }
+    },
+    "(2, 512, 0.3, 1e-06)": {
+        "hyperparameters": {
+            "num_layers": 2,
+            "dim_feedforward": 512,
+            "dropout": 0.3,
+            "learning_rate": 1e-06
+        },
+        "results": {
+            "train_loss": 159215.65104166666,
+            "test_loss": 161250.671875
+        }
+    },
+    "(4, 256, 0.1, 0.001)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 256,
+            "dropout": 0.1,
+            "learning_rate": 0.001
+        },
+        "results": {
+            "train_loss": 152378.90625,
+            "test_loss": 154257.90625
+        }
+    },
+    "(4, 256, 0.1, 0.0001)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 256,
+            "dropout": 0.1,
+            "learning_rate": 0.0001
+        },
+        "results": {
+            "train_loss": 154349.42708333334,
+            "test_loss": 156268.765625
+        }
+    },
+    "(4, 256, 0.1, 1e-05)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 256,
+            "dropout": 0.1,
+            "learning_rate": 1e-05
+        },
+        "results": {
+            "train_loss": 157753.046875,
+            "test_loss": 159825.265625
+        }
+    },
+    "(4, 256, 0.1, 1e-06)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 256,
+            "dropout": 0.1,
+            "learning_rate": 1e-06
+        },
+        "results": {
+            "train_loss": 158274.86979166666,
+            "test_loss": 160304.09375
+        }
+    },
+    "(4, 256, 0.3, 0.001)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 256,
+            "dropout": 0.3,
+            "learning_rate": 0.001
+        },
+        "results": {
+            "train_loss": 152298.85416666666,
+            "test_loss": 154179.125
+        }
+    },
+    "(4, 256, 0.3, 0.0001)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 256,
+            "dropout": 0.3,
+            "learning_rate": 0.0001
+        },
+        "results": {
+            "train_loss": 155193.21875,
+            "test_loss": 157163.453125
+        }
+    },
+    "(4, 256, 0.3, 1e-05)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 256,
+            "dropout": 0.3,
+            "learning_rate": 1e-05
+        },
+        "results": {
+            "train_loss": 158420.34895833334,
+            "test_loss": 160448.125
+        }
+    },
+    "(4, 256, 0.3, 1e-06)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 256,
+            "dropout": 0.3,
+            "learning_rate": 1e-06
+        },
+        "results": {
+            "train_loss": 159279.16666666666,
+            "test_loss": 161438.5625
+        }
+    },
+    "(4, 512, 0.1, 0.001)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 512,
+            "dropout": 0.1,
+            "learning_rate": 0.001
+        },
+        "results": {
+            "train_loss": 152207.078125,
+            "test_loss": 154077.625
+        }
+    },
+    "(4, 512, 0.1, 0.0001)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 512,
+            "dropout": 0.1,
+            "learning_rate": 0.0001
+        },
+        "results": {
+            "train_loss": 154928.484375,
+            "test_loss": 156886.15625
+        }
+    },
+    "(4, 512, 0.1, 1e-05)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 512,
+            "dropout": 0.1,
+            "learning_rate": 1e-05
+        },
+        "results": {
+            "train_loss": 157990.78645833334,
+            "test_loss": 160070.234375
+        }
+    },
+    "(4, 512, 0.1, 1e-06)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 512,
+            "dropout": 0.1,
+            "learning_rate": 1e-06
+        },
+        "results": {
+            "train_loss": 158592.140625,
+            "test_loss": 160669.71875
+        }
+    },
+    "(4, 512, 0.3, 0.001)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 512,
+            "dropout": 0.3,
+            "learning_rate": 0.001
+        },
+        "results": {
+            "train_loss": 152462.96354166666,
+            "test_loss": 154345.171875
+        }
+    },
+    "(4, 512, 0.3, 0.0001)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 512,
+            "dropout": 0.3,
+            "learning_rate": 0.0001
+        },
+        "results": {
+            "train_loss": 154332.81770833334,
+            "test_loss": 156343.515625
+        }
+    },
+    "(4, 512, 0.3, 1e-05)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 512,
+            "dropout": 0.3,
+            "learning_rate": 1e-05
+        },
+        "results": {
+            "train_loss": 158123.55208333334,
+            "test_loss": 160213.96875
+        }
+    },
+    "(4, 512, 0.3, 1e-06)": {
+        "hyperparameters": {
+            "num_layers": 4,
+            "dim_feedforward": 512,
+            "dropout": 0.3,
+            "learning_rate": 1e-06
+        },
+        "results": {
+            "train_loss": 159209.28645833334,
+            "test_loss": 161274.421875
+        }
+    }
+}
